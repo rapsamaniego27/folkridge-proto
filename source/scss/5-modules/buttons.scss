@@ -1,17 +1,4 @@
 
-.btn-success{
-  @include btn-background($success);
+.btn-accent {
+  @include btn-background($accent);
 }
-
-.btn-danger{
-  @include btn-background($danger);
-}
-
-.btn-info{
-  @include btn-background($info);
-}
-
-.btn-warning{
-  @include btn-background($warning);
-}
-

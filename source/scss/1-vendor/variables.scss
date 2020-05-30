@@ -1,7 +1,7 @@
 // Colors
 
-$primary:  #073763;
-$accent:  #E4572E;
+$primary: #2F0F11;
+$accent: #DD8527;
 
 // Semantics
 $success:  #9FD356;
@@ -15,6 +15,7 @@ $silver: #ddd;
 $gray:   #aaa;
 $dark: #333;
 $black:  #111;
+$brown: #464646;
 
 $light: #fff;
 $green: green;
@@ -29,10 +30,10 @@ $bold: 700;
 
 //Fonts
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-$sans-serif: "Open Sans", Helvetica, Verdana, sans-serif;
-$serif: Merriweather, Georgia, "Times New Roman", serif;
+$sans-serif: "Lato", Helvetica, Verdana, sans-serif;
+$serif: 'Arvo', "Times New Roman", serif;
 $mono: "Source Code Pro", Courier, mono;
 
 //Media queries
