@@ -1,0 +1,51 @@
+// Colors
+
+$primary:  #073763;
+$accent:  #E4572E;
+
+// Semantics
+$success:  #9FD356;
+$danger:  #960200;
+$warning:  #EDA921;
+$info:  #0074D9;
+
+// Gray Scale
+$white:  #fff;
+$silver: #ddd;
+$gray:   #aaa;
+$dark: #333;
+$black:  #111;
+
+$light: #fff;
+$green: green;
+
+
+// Font Weights
+
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+
+//Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+$sans-serif: "Open Sans", Helvetica, Verdana, sans-serif;
+$serif: Merriweather, Georgia, "Times New Roman", serif;
+$mono: "Source Code Pro", Courier, mono;
+
+//Media queries
+// Note: 
+// Max <   Min >
+
+// $device-lg: "only screen and (min-width: 1366px)";
+$device-lg: "only screen and (max-width: 1366px)";
+$device-md-between: "(min-width: 768px) and (max-width: 979px)";
+$device-md: "only screen and (max-width: 1024px)";
+$device-sm: "only screen and (max-width: 767px)";
+$device-xs: "only screen and (max-width: 480px)";
+
+.pink{
+  background:pink;
+}

@@ -1,0 +1,38 @@
+// Typography
+
+h1, h2, h3, h4, h5, h6{
+  color: $accent;
+  font-family: $sans-serif;
+  font-weight: $bold;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.03);
+}
+
+
+h1{
+  font-size:2rem;
+  @media #{$device-sm}{
+		font-size:1.7rem;	
+	}
+}
+h2{
+  font-size:1.5rem;
+}
+h3{
+  font-size:1.17rem;
+}
+h4{
+  font-size:1rem;
+}
+h5{
+  font-size:.83rem;
+}
+
+h6{
+  font-size:.67rem;
+}
+
+p{
+  font-size: 1rem
+}
+
+
