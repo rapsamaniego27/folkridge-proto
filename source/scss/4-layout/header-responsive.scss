@@ -22,7 +22,7 @@
     }
 
     nav{
-      transform:translateX(100%);
+      /* transform:translateX(100%); */
       position:absolute;
       right:0;
       top:0;
@@ -30,10 +30,7 @@
       background:#4A1B1E;
       height:70vh;
       border:none;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
+
 
       .nav-list{
         flex-direction: column;
@@ -55,6 +52,13 @@
         }
       }
 
+      .nav-close{
+        margin-left: 20px;
+        margin-top: 20px;
+        display:block !important;
+        color:$white;
+        cursor:pointer;
+      }
       
     }
 

@@ -72,7 +72,7 @@ nav{
           height: 0;
           border-left: 6px solid transparent;
           border-right: 6px solid transparent;
-          border-left: 12px solid transparent;
+          border-bottom: 12px solid transparent;
            transition: all 0.3s $anim-primary;
        }
     }
@@ -90,4 +90,8 @@ nav{
 /* Burger */
 .burger{
   cursor:pointer;
+}
+.nav-close{
+  color:$white;
+  display:none !important;
 }
