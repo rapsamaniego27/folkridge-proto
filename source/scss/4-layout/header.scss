@@ -1,56 +1,84 @@
 
 
 header{
-  background:$light;
-  padding: 1rem 0;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+  background:$primary;
 }
 
+.logo__container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+  padding: 0.75rem 0;
 
-.logo{
-  width:150px;
-}
+  .logo-img__container{
+    display:block;
 
-
-.top-menu{
-  list-style-type:none;
-  margin:0;
-  padding:0;
-  display:none;
-  
-  @media screen and (min-width:992px){
-    display:flex;
-  }
-
-  li{
-    list-style-type:none;
-    a{
-      display:block;
-      padding: 0.25rem 1rem;
-      color: $dark;
-      font-size:1rem;
-      font-weight:bold;
+    .logo-img {
+      width: 164px;
     }
   }
 
+
+  .logo-text {
+    font-size: 2rem;
+    color: $white;
+    font-family: $serif;
+    font-weight: bold;
+    margin:10px 0 0 0;
+    letter-spacing:1px;
+  }
+
 }
 
-#hero{
-  height:300px;
+nav{
+  border-top:3px solid $accent;
+  border-bottom:3px solid $accent;
   width:100%;
-  background: url('images/hero.jpg') #f0f0f0;
-  background-size: cover;
 
-  h1{
-    color:$light;
+  .nav-list{
+    display:flex;
+    justify-content:center;
+   
+
+    .nav-list__item{
+      margin:20px 0 0 0;
+      padding:0 20px;
+      display:flex;
+      align-items:center;
+      flex-direction:column;
+      height:40px;
+      align-self: center;
+      cursor:pointer;
+      transition: all 0.3s $anim-primary;
+
+       &:hover > .nav-link{
+         color:$accent;
+       }
+       &:hover:after {
+         border-left: 6px solid transparent;
+         border-right: 6px solid transparent;
+         border-bottom: 12px solid $accent;
+       }
+
+       &::after{
+          content: '';
+          width: 0;
+          height: 0;
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-bottom: 12px solid transparent;
+           transition: all 0.3s $anim-primary;
+       }
+    }
   }
 
-  @media screen and (min-width:768px){
-    height:450px;
+  .nav-link{
+    color:$white;
+    font-family:$serif;
+    font-size:1.25rem;
+    flex-grow:1;
   }
+  
 
-  @media screen and (min-width:1200px){
-    height:550px;
-  }
 }
-
