@@ -21,15 +21,22 @@
       display:block;
     }
 
-    nav{
-      transform:translateX(100%);
+    .nav-overlay{
       position:absolute;
+      width:100%;
       right:0;
       top:0;
+      background-color: rgba(0, 0, 0, 0.4);
+      transform:translateX(100%);
+    }
+
+    nav{
       width: 70%;
+      margin-left:auto;
       background:#4A1B1E;
-      min-height:70vh;
+      min-height:100vh;
       border:none;
+      transform:translateX(100%);
 
 
 
@@ -59,6 +66,11 @@
         display:inline-block !important;
         color:$white;
         cursor:pointer;
+        transition: color 0.3s ease $anim-primary;
+
+        &:hover{
+          color:$accent;
+        }
       }
       
     }

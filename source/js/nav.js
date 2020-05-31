@@ -1,8 +1,9 @@
 /* Navigation */
 class Navigation{
-  constructor(openTrigger, closeTrigger, menu){
+  constructor(openTrigger, closeTrigger, overlay, menu){
     this.openTrigger = openTrigger;
     this.closeTrigger = closeTrigger;
+    this.overlay = overlay;
     this.menu = menu;
     
   }
@@ -13,6 +14,7 @@ class Navigation{
     this.openTrigger.addEventListener('click', (e) => {
       try {
         this.menu.classList.add('nav--show');
+        this.overlay.classList.add('nav--show');
 
       } catch (err) {
         console.log(err);
@@ -24,9 +26,15 @@ class Navigation{
   //Close Nav
   close(){ 
     this.closeTrigger.addEventListener('click', (e) => {
+
       try {
+        
         this.menu.classList.remove('nav--show');
 
+        setTimeout(() => {
+          this.overlay.classList.remove('nav--show');
+        },300);
+        
       } catch (err) {
         console.log(err);
       }
@@ -50,7 +58,8 @@ class Navigation{
       const windowWidth = await this.getWidth();
 
       if (windowWidth > MINIMUM) 
-        return this.menu.classList.remove('nav--show');
+        return this.menu.classList.remove('nav--show')
+               this.overlay.classList.remove('nav--show');
       
       
     });
@@ -58,12 +67,11 @@ class Navigation{
   }
 
   clickedOutside(){
-    const outside = document.querySelector('#main');
+    const outside = this.overlay;
     
     outside.addEventListener('click', (e)=> {
-     /* if(this.menu.classList.contains('nav--show')){
-       this.closeTrigger.click();
-     } */
+    if(e.target == outside)
+     return this.closeTrigger.click();
     
       
     });
@@ -77,11 +85,12 @@ class Navigation{
 
 const navOpen = document.querySelector('#navOpen');
 const navClose = document.querySelector('#navClose');
+const navOverlay = document.querySelector('#navOverlay');
 const nav = document.querySelector('#nav');
 
-const navigation = new Navigation(navOpen, navClose, nav);
+const navigation = new Navigation(navOpen, navClose, navOverlay, nav);
 
 navigation.open();
 navigation.close();
-navigation.checkWindowSize();
 navigation.clickedOutside();
+navigation.checkWindowSize();
