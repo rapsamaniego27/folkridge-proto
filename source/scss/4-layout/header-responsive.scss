@@ -4,7 +4,7 @@
     .logo__container{
        flex-direction: row;
        justify-content:space-between;
-       width:80%;
+       width:85%;
        margin:0 auto;
 
        .logo-text{
@@ -22,14 +22,15 @@
     }
 
     nav{
-      /* transform:translateX(100%); */
+      transform:translateX(100%);
       position:absolute;
       right:0;
       top:0;
       width: 70%;
       background:#4A1B1E;
-      height:70vh;
+      min-height:70vh;
       border:none;
+
 
 
       .nav-list{
@@ -55,7 +56,7 @@
       .nav-close{
         margin-left: 20px;
         margin-top: 20px;
-        display:block !important;
+        display:inline-block !important;
         color:$white;
         cursor:pointer;
       }
@@ -66,5 +67,12 @@
       overflow-x:hidden;
     }
     
-  
+     .nav--transition {
+       transition: transform 0.3s $anim-primary;
+     }
  }
+
+ .nav--show{
+   transform:translateX(0);
+ }
+
