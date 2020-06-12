@@ -1,0 +1,13 @@
+@media #{$device-xs}{
+
+  .footer-social-media__container{
+    width:75%;
+  }
+
+  .footer-social-media__link{
+
+    .footer-social-media__icon{
+      font-size:1.25rem;
+    }
+  }
+}
