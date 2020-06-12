@@ -77,8 +77,28 @@ class Navigation{
     });
   }
 
+  checkIfSubmenu(){
+    const menuItems = document.querySelectorAll('.nav-list__item');
+    
+    menuItems.forEach(item => {
+      if(item.classList.contains('has-submenu')){
+        item.addEventListener('click', (e)=> {
+          e.preventDefault();
+        
+          const navLink = item.children[0];
+          const submenu = item.children[1];
 
-  
+          if(e.target == navLink)
+            return submenu.classList.toggle('submenu--show');
+          
+        });
+      }
+      
+    });
+    
+    
+  }
+
 
 }
 
@@ -94,3 +114,4 @@ navigation.open();
 navigation.close();
 navigation.clickedOutside();
 navigation.checkWindowSize();
+navigation.checkIfSubmenu();

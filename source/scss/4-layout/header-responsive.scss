@@ -1,5 +1,5 @@
 /* Header Responsiveness */
-
+/* Row Query */
  @media #{$device-sm} {
     .logo__container{
        flex-direction: row;
@@ -8,9 +8,10 @@
        margin:0 auto;
 
        .logo-text{
-        font-size:1.25rem;
-        line-height:1.25rem;
-        padding-left: 0.5rem;
+        font-size:0.75rem;
+        line-height:0.75rem;
+        padding-left: 0.375rem;
+        margin:3px 0 0 0;
         text-align: justify;
        }
        
@@ -27,8 +28,7 @@
 
 
     .logo-img {
-      width: 60px !important;
-      padding-top:5px;
+      width: 40px !important;
     }
 
     .burger{
@@ -52,26 +52,23 @@
       border:none;
       transform:translateX(100%);
 
-
-
       .nav-list{
         flex-direction: column;
         justify-content:center;
 
         .nav-list__item {
-          flex-direction: row;
-
-           &:hover>.nav-link {
-             padding-right:4px;
-           }
-
-          &:hover:after{
-            border-top: 6px solid transparent;
-            border-bottom: 6px solid transparent;
-            border-right: 12px solid $accent;
-            padding-left:4px;
+          
+          &:after{
+            display:none;
           }
         }
+
+        .nav-link{
+          padding: 10px 0;
+          width: 100%;
+          text-align: center;
+        }
+
       }
 
       .nav-close{
@@ -97,10 +94,61 @@
        transition: transform 0.3s $anim-primary;
      }
 
+    .submenu{
+      width:100% !important;
+      top:0 !important;
+      max-height:0;
+      transition: max-height 0.2s $anim-primary !important;
+      position:relative !important;
+    }
+
+    .submenu-item{
+      text-align: center;
+      padding:0 !important;
+
+      .submenu-item__link{
+        width:100%;
+        padding: 10px 0;
+        display:block;
+      }
+    }
+      
+    .submenu-item:not(:last-of-type){
+      border-bottom: 1px solid $primary;
+    }
+
+    .nav-list__item{
+      width:100%;
+      padding:0 0 0 0 !important;
+      border-bottom: 1px solid $white;
+      margin:0 !important;
+    }
+
+    .nav-list__item:hover>.submenu {
+      visibility:hidden;
+      opacity:0;
+    }
+
+    .submenu-item:hover {
+      background: $accent;
+    }
 
  }
+ /* End QUery */
+
+
 
  .nav--show{
    transform:translateX(0);
  }
+
+.submenu--show {
+  max-height: 300px;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  margin-top: 5px;
+}
+
+/* Hover */
 

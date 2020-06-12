@@ -106,7 +106,7 @@ nav{
     box-shadow: 1px 1px 4px #888888;
 
     .submenu-item__link{
-      color:$black;
+      color:$primary;
       font-size:1rem;
     }
     .submenu-item{
@@ -128,4 +128,8 @@ nav{
 .nav-list__item:hover > .submenu{
    visibility:visible;
    opacity:1;
+}
+
+.submenu-item:hover{
+  background:$accent;
 }
