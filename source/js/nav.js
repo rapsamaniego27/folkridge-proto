@@ -8,7 +8,6 @@ class Navigation{
     
   }
 
-
   //Open Nav
   open(){
     this.openTrigger.addEventListener('click', (e) => {
@@ -51,19 +50,24 @@ class Navigation{
 
   }
 
-  checkWindowSize(){
+  checkWindowOnResize(){
     const MINIMUM = 767;
     
     window.addEventListener('resize', async()=> {
       const windowWidth = await this.getWidth();
 
       if (windowWidth > MINIMUM) 
-        return this.menu.classList.remove('nav--show')
-               this.overlay.classList.remove('nav--show');
-      
+        return this.hideNav(this.menu, this.overlay);
+
+      this.stickToTop();
       
     });
     
+  }
+
+  hideNav(menu, overlay){
+     menu.classList.remove('nav--show');
+     overlay.classList.remove('nav--show');
   }
 
   clickedOutside(){
@@ -84,10 +88,12 @@ class Navigation{
       if(item.classList.contains('has-submenu')){
         item.addEventListener('click', (e)=> {
           e.preventDefault();
-        
+          
+          /* Nav Link and Submenu */
           const navLink = item.children[0];
           const submenu = item.children[1];
 
+          /* Checks if clicked element is equals to navlinl */
           if(e.target == navLink)
             return submenu.classList.toggle('submenu--show');
           
@@ -96,6 +102,37 @@ class Navigation{
       
     });
     
+  }
+
+
+  stickToTop() {
+    const MINIMUM = 767;
+    const SCREEN_BREAKPOINT = 25;
+    const header = document.querySelector('header');
+  
+
+    window.addEventListener('scroll', () => {
+      const screenVertical = window.scrollY;
+      const windowWidth = window.innerWidth;
+
+      /* Checks if screen Vertical is equal to breakpoint
+         if false it removes header--fixed class
+      */
+      /* if(windowWidth < MINIMUM) {
+        if (screenVertical > SCREEN_BREAKPOINT) {
+          header.classList.add('header--fixed');
+          console.log(windowWidth);
+        } else {
+          header.classList.remove('header--fixed');
+        }
+      } */
+
+      if (windowWidth > MINIMUM) return
+      if (screenVertical > SCREEN_BREAKPOINT) return header.classList.add('header--fixed')
+          return header.classList.remove('header--fixed')
+
+    });
+      
     
   }
 
@@ -113,5 +150,6 @@ const navigation = new Navigation(navOpen, navClose, navOverlay, nav);
 navigation.open();
 navigation.close();
 navigation.clickedOutside();
-navigation.checkWindowSize();
+navigation.checkWindowOnResize();
 navigation.checkIfSubmenu();
+navigation.stickToTop();

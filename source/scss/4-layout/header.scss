@@ -99,7 +99,7 @@ nav{
     position:absolute;
     width:150%;
     list-style: none;
-    top:40px;
+    top:30px;
     visibility:hidden;
     opacity:0;
     transition: opacity 0.3s $anim-primary;
@@ -132,4 +132,12 @@ nav{
 
 .submenu-item:hover{
   background:$accent;
+}
+
+/* Header Effect */
+.header--fixed{
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
 }
