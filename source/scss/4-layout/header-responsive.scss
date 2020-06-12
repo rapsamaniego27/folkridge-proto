@@ -8,13 +8,27 @@
        margin:0 auto;
 
        .logo-text{
-         display:none;
+        font-size:1.25rem;
+        line-height:1.25rem;
+        padding-left: 0.5rem;
+        text-align: justify;
        }
        
     }
 
+    .logo__wrapper {
+      flex-direction: row;
+    }
+
+    .logo-text__first::after{
+      content:"\a";
+      white-space:pre;
+    }
+
+
     .logo-img {
-      width: 70px !important;
+      width: 60px !important;
+      padding-top:5px;
     }
 
     .burger{
@@ -82,6 +96,8 @@
      .nav--transition {
        transition: transform 0.3s $anim-primary;
      }
+
+
  }
 
  .nav--show{

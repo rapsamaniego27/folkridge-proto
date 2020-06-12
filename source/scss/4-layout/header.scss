@@ -21,6 +21,7 @@ header{
 
     .logo-img {
       width: 130px;
+      margin:0 auto;
     }
   }
 
@@ -29,11 +30,18 @@ header{
     font-size: 2rem;
     color: $white;
     font-family: $serif;
-    font-weight: bold;
+    font-weight: 600;
     margin:10px 0 0 0;
     letter-spacing:1px;
   }
 
+}
+
+.logo__wrapper{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 nav{
@@ -52,10 +60,11 @@ nav{
       display:flex;
       align-items:center;
       flex-direction:column;
-      height:40px;
+      height:100%;
       align-self: center;
       cursor:pointer;
       transition: all 0.3s $anim-primary;
+      position:relative;
 
        &:hover > .nav-link{
          color:$accent;
@@ -85,6 +94,26 @@ nav{
     flex-grow:1;
   }
 
+  .submenu{
+    background:$lightbrown;
+    position:absolute;
+    width:150%;
+    list-style: none;
+    top:40px;
+    visibility:hidden;
+    opacity:0;
+    transition: opacity 0.3s $anim-primary;
+    box-shadow: 1px 1px 4px #888888;
+
+    .submenu-item__link{
+      color:$black;
+      font-size:1rem;
+    }
+    .submenu-item{
+      padding: 10px;
+    }
+  }
+
 }
 
 /* Burger */
@@ -93,4 +122,10 @@ nav{
 }
 .nav-close{
   display:none !important;
+}
+
+/* Hover */
+.nav-list__item:hover > .submenu{
+   visibility:visible;
+   opacity:1;
 }
