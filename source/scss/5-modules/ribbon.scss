@@ -1,0 +1,27 @@
+.ribbon{
+   width:300px;
+   padding: 10px;
+   position:relative;
+   background:$primary;
+   margin:30px auto 0 auto;
+}
+
+.ribbon:before,
+.ribbon:after {
+  content: "";
+  bottom: 0;
+  position: absolute;
+  display: block;
+  border: 25px solid $primary;
+  z-index: -2;
+}
+
+.ribbon:before {
+  left: -26px;
+  border-left-color: transparent;
+}
+
+.ribbon:after {
+  right: -26px;
+  border-right-color: transparent;
+}

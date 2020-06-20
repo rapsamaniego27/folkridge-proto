@@ -1,0 +1,58 @@
+@media #{$device-xs}{
+  .offer__items{
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+   /*  flex-wrap:wrap; */
+  }
+
+  .offer-item__container {
+      width: 90% !important;
+      height: 236px !important;
+      margin: 20px auto;
+  }
+
+  
+}
+
+@media #{$device-lg}{
+  .offer-item__container {
+    width:320px;
+    height:213px;
+  }
+
+  .offer__items {
+    justify-content: space-around;
+    width:100%;
+  }
+}
+
+@media #{$device-md} {
+  .offer-item__container {
+    width: 260px;
+    height: 173px;
+  }
+
+  .offer-item__title-container {
+    background: $primary;
+    padding: 10px;
+    position: absolute;
+    width: 100px;
+    bottom: -18px;
+    right: 12px;
+    .offer-item__title{
+      font-size:1rem;
+    }
+  }
+
+}
+
+@media #{$device-sm} {
+  .offer-item__container {
+    width: 190px;
+    height: 126px;
+  }
+
+
+
+}
