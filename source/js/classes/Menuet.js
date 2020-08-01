@@ -36,7 +36,8 @@ class Menuet {
  }
 
  close(){
-  this.closeTrigger.addEventListener('click', (e) => {
+  this.overlay.addEventListener('click', (e) => {
+    console.log(e.target)
     if (e.target == this.overlay || e.target == this.closeTrigger) {
       try {
         this.nav.classList.remove('nav--show');
