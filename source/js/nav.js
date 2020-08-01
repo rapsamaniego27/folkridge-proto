@@ -135,17 +135,3 @@ class Navigation{
 
 }
 
-
-const navOpen = document.querySelector('#navOpen');
-const navClose = document.querySelector('#navClose');
-const navOverlay = document.querySelector('#navOverlay');
-const nav = document.querySelector('#nav');
-
-const navigation = new Navigation(navOpen, navClose, navOverlay, nav);
-
-navigation.open();
-navigation.close();
-navigation.clickedOutside();
-navigation.checkWindowOnResize();
-navigation.checkIfSubmenu();
-navigation.stickToTop();

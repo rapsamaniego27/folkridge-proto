@@ -15,4 +15,9 @@ mix.options({
     processCssUrls: false
 }).sass('source/scss/style.scss', 'dist/style.min.css');
  
-mix.combine(['source/js/*'], 'dist/app.js');
+mix.combine([
+    'source/js/classes/*',
+    'source/js/components/*',
+    'source/js/misc/*',
+    'source/js/vendors/*'
+], 'dist/app.js');
