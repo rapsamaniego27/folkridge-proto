@@ -7,7 +7,7 @@
 
   .grid-content{
     outline: 1px solid black;
-    background:$gray;
+    background:var(--gray);
 
     @media #{$device-md}{
       max-width:100%;
@@ -15,7 +15,7 @@
   }
 
   h3{
-    color:$primary;
+    color:var(--primary);
   }
 
   
@@ -27,12 +27,12 @@
 
   .grid__custom__content{
     outline: 1px solid black;
-    background:$gray;
+    background:var(--gray);
 
   }
 
   h3{
-    color:$primary;
+    color:var(--primary);
   }
   
 }

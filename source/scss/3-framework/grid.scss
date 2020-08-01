@@ -85,11 +85,15 @@ $column-list: null;
 
 $gutters: (5, 10, 15, 20);
 
-@each $gutter in $gutters{
-  .gut-#{$gutter}{
-    margin:0 #{$gutter}px;
+@mixin createGutters($gutters){
+  @each $gutter in $gutters {
+    .gut-#{$gutter} {
+      margin:0 #{$gutter}px;
+    }
   }
 }
+
+@include createGutters($gutters);
 
 //Automatic Column
 

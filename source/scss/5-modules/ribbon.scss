@@ -2,7 +2,7 @@
    width:300px;
    padding: 10px;
    position:relative;
-   background:$primary;
+   background:var(--primary);
    margin:30px auto 0 auto;
 }
 
@@ -12,7 +12,7 @@
   bottom: 0;
   position: absolute;
   display: block;
-  border: 25px solid $primary;
+  border: 25px solid var(--primary);
   z-index: -2;
 }
 

@@ -22,8 +22,9 @@
   }
 }
 
-
-
+/* ===================== */
+/* Container generator */
+/* ===================== */
 // Loop through these classes to have max-width of 1366px
 // And response to 900 px if it's in Laptop Mode
   $classes: (container, footer__bottom);
@@ -31,7 +32,8 @@
   @each $class in $classes{
     .#{$class}{
       max-width: 1366px;
-      margin:0 auto;
+      margin-right: auto;
+      margin-left: auto;
     }
 
     //Laptop Media Query
@@ -41,11 +43,30 @@
       }
     }
 
-    @media (min-width:1024px) and (max-width:1280px){
-      .#{$class}{
+    @media (max-width: 1280px) {
+      .#{$class} {
         max-width: 986px;
       }
     }
+
+    @media (max-width: 986px) {
+      .#{$class} {
+        max-width: 930px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .#{$class} {
+        max-width: 720px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .#{$class} {
+        max-width: 540px;
+      }
+    }
+
     
   }
 

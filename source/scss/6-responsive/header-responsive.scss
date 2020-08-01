@@ -75,12 +75,12 @@
         margin-left: 20px;
         margin-top: 20px;
         display:inline-block !important;
-        color:$white;
+        color:var(--white);
         cursor:pointer;
-        transition: color 0.3s ease $anim-primary;
+        transition: color 0.3s ease var(--anim-primary);
 
         &:hover{
-          color:$accent;
+          color:var(--accent);
         }
       }
       
@@ -91,14 +91,14 @@
     }
     
      .nav--transition {
-       transition: transform 0.3s $anim-primary;
+       transition: transform 0.3s var(--anim-primary);
      }
 
     .submenu{
       width:100% !important;
       top:0 !important;
       max-height:0;
-      transition: max-height 0.2s $anim-primary !important;
+      transition: max-height 0.2s var(--anim-primary) !important;
       position:relative !important;
     }
 
@@ -114,13 +114,13 @@
     }
       
     .submenu-item:not(:last-of-type){
-      border-bottom: 1px solid $primary;
+      border-bottom: 1px solid var(--primary);
     }
 
     .nav-list__item{
       width:100%;
       padding:0 0 0 0 !important;
-      border-bottom: 1px solid $white;
+      border-bottom: 1px solid var(--white);
       margin:0 !important;
     }
 
@@ -130,7 +130,7 @@
     }
 
     .submenu-item:hover {
-      background: $accent;
+      background: var(--accent);
     }
 
  }

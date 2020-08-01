@@ -28,7 +28,7 @@
 
   footer {
     background: url(../images/bluegrass-instruments.svg) center 155px no-repeat,
-      $primary;
+      var(--primary);
      background-size:600px;
   }
 
@@ -57,7 +57,7 @@
 
   footer {
     background: url(../images/bluegrass-instruments.svg) center 110% no-repeat,
-      $primary;
+      var(--primary);
 
     background-size:80%;
    

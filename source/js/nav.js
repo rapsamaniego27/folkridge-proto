@@ -25,9 +25,7 @@ class Navigation{
   //Close Nav
   close(){ 
     this.closeTrigger.addEventListener('click', (e) => {
-
       try {
-        
         this.menu.classList.remove('nav--show');
 
         setTimeout(() => {
@@ -99,9 +97,7 @@ class Navigation{
           
         });
       }
-      
-    });
-    
+    });  
   }
 
 

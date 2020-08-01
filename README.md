@@ -2,7 +2,7 @@
 # Folk Ridge Homepage Prototype
 
 <!-- Description -->
-This is a prototype homepage for **Folk Ridge**
+This is a prototype homepage for the band **Folk Ridge**.
 
 
 

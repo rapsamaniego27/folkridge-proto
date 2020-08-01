@@ -1,7 +1,7 @@
 
 /* Header */
 header{
-  background:$primary;
+  background:var(--primary);
   position:relative;
 }
 
@@ -28,7 +28,7 @@ header{
 
   .logo-text {
     font-size: 2rem;
-    color: $white;
+    color: var(--white);
     font-family: $serif;
     font-weight: 600;
     margin:10px 0 0 0;
@@ -45,8 +45,8 @@ header{
 }
 
 nav{
-  border-top:3px solid $accent;
-  border-bottom:3px solid $accent;
+  border-top:3px solid var(--accent);
+  border-bottom:3px solid var(--accent);
   width:100%;
 
   .nav-list{
@@ -63,16 +63,16 @@ nav{
       height:100%;
       align-self: center;
       cursor:pointer;
-      transition: all 0.3s $anim-primary;
+      transition: all 0.3s var(--anim-primary);
       position:relative;
 
        &:hover > .nav-link{
-         color:$accent;
+         color:var(--accent);
        }
        &:hover:after {
          border-left: 6px solid transparent;
          border-right: 6px solid transparent;
-         border-bottom: 12px solid $accent;
+         border-bottom: 12px solid var(--accent);
        }
 
        &::after{
@@ -82,31 +82,31 @@ nav{
           border-left: 6px solid transparent;
           border-right: 6px solid transparent;
           border-bottom: 12px solid transparent;
-           transition: all 0.3s $anim-primary;
+           transition: all 0.3s var(--anim-primary);
        }
     }
   }
 
   .nav-link{
-    color:$white;
+    color:var(--white);
     font-family:$serif;
     font-size:1.25rem;
     flex-grow:1;
   }
 
   .submenu{
-    background:$lightbrown;
+    background:var(--lightbrown);
     position:absolute;
     width:150%;
     list-style: none;
     top:30px;
     visibility:hidden;
     opacity:0;
-    transition: opacity 0.3s $anim-primary;
+    transition: opacity 0.3s var(--anim-primary);
     box-shadow: 1px 1px 4px #888888;
 
     .submenu-item__link{
-      color:$primary;
+      color:var(--primary);
       font-size:1rem;
     }
     .submenu-item{
@@ -131,7 +131,7 @@ nav{
 }
 
 .submenu-item:hover{
-  background:$accent;
+  background:var(--accent);
 }
 
 /* Header Effect */

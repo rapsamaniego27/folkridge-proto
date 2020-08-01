@@ -11,4 +11,6 @@
   animation: show-element 2s;
 }
 
-$anim-primary: cubic-bezier(.04, .71, .96, 1.04);
+:root{
+  --anim-primary: cubic-bezier(.04, .71, .96, 1.04);
+}
