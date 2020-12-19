@@ -1,0 +1,14 @@
+.about__container{
+ background: var(--primary);
+}
+
+.about-info__container{
+ display:flex;
+ justify-content:space-between;
+ flex-direction: column;
+ min-height: 300px;
+
+ a{
+  align-self:baseline;
+ }
+}

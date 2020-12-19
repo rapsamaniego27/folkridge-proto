@@ -1,0 +1,31 @@
+.band-swiper, .swiper-container {
+    width: 600px;
+    height: 300px;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--white) !important;
+
+  &:after{
+   content:'' !important;
+  }
+}
+
+.swiper-slide{
+
+}
+
+.swiper__outer{
+ position:relative;
+}
+
+.swiper-slide{
+ width:600px !important;
+ height:428px !important;
+ object-fit:cover;
+}

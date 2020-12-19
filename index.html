@@ -14,6 +14,7 @@
 
   <!-- Row Styles -->
   <link rel="stylesheet" href="dist/style.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
   <div id="wrapper">
@@ -129,48 +130,51 @@
       <!-- End Offer -->
 
 
-      <!-- Row Content -->
-      <div class="content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa, unde consectetur non eum accusantium sunt sed similique optio voluptatum ipsam! Nisi, suscipit ab nulla adipisci nemo hic dignissimos assumenda!
-        <br><br>
+      <!-- Row About -->
+      <div class="about__container mt-60 mb-60">
+        <div class="mt-70 container container__flex">
+          <div class="col-lg6 mt-60 mb-60">
+            <!-- Slider main container -->
+            <div class="swiper__outer">
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa, unde consectetur non eum accusantium sunt
-        sed similique optio voluptatum ipsam! Nisi, suscipit ab nulla adipisci nemo hic dignissimos assumenda!
-        <br><br>
+              <div class="swiper-button-prev"><i class="fas fa-chevron-left fa-3x"></i></div>
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa, unde consectetur non eum accusantium sunt
-        sed similique optio voluptatum ipsam! Nisi, suscipit ab nulla adipisci nemo hic dignissimos assumenda!
-        <br><br>
+              <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <img src="./images/slide1.jpg" class="swiper-slide">
+                  <img src="./images/slide2.jpg" class="swiper-slide">
+                  <img src="./images/slide3.jpg" class="swiper-slide">
+                  ...
+                </div>
+              </div>
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa, unde consectetur non eum accusantium sunt
-        sed similique optio voluptatum ipsam! Nisi, suscipit ab nulla adipisci nemo hic dignissimos assumenda!
-        <br><br>
+              <div class="swiper-button-next"><i class="fas fa-chevron-right fa-3x"></i></div>
+            </div>
+          </div>
+          
+         
+        
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa, unde consectetur non eum accusantium sunt
-        sed similique optio voluptatum ipsam! Nisi, suscipit ab nulla adipisci nemo hic dignissimos assumenda!
-        <br><br>
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa, unde consectetur non eum accusantium sunt
-        sed similique optio voluptatum ipsam! Nisi, suscipit ab nulla adipisci nemo hic dignissimos assumenda!
-        <br><br>
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa, unde consectetur non eum accusantium sunt
-        sed similique optio voluptatum ipsam! Nisi, suscipit ab nulla adipisci nemo hic dignissimos assumenda!
-        <br><br>
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa, unde consectetur non eum accusantium sunt
-        sed similique optio voluptatum ipsam! Nisi, suscipit ab nulla adipisci nemo hic dignissimos assumenda!
-        <br><br>
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa, unde consectetur non eum accusantium sunt
-        sed similique optio voluptatum ipsam! Nisi, suscipit ab nulla adipisci nemo hic dignissimos assumenda!
-        <br><br>
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa, unde consectetur non eum accusantium sunt
-        sed similique optio voluptatum ipsam! Nisi, suscipit ab nulla adipisci nemo hic dignissimos assumenda!
-        <br><br>
+          <div class="col-lg6 mt-60 mb-60">
+            <div class="about-info__container pr-20 pl-20">
+              <h2>About the Band</h2>
+        
+              <p class="hex-white pt-30">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                <br><br>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.
+              </p>
+        
+              <a href="#" target="_blank" class="btn btn-accent mt-30">Book Us Now</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- End Content -->
+      <!-- End About -->
     </div>
 
     <!-- Row Footer -->
@@ -226,8 +230,10 @@
   </div>
 
   <!-- Row Scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./dist/app.js"></script>
   <script src="https://kit.fontawesome.com/e33b567028.js"></script>
+  
 </body>
 </html>
 
