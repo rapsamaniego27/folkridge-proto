@@ -1,5 +1,10 @@
 .about__container{
  background: var(--primary);
+ min-height:560px;
+
+ @media #{$device-md}{
+   
+ }
 }
 
 .about-info__container{
@@ -10,5 +15,12 @@
 
  a{
   align-self:baseline;
+ }
+
+ @media #{$device-md}{
+  justify-content:center;
+
+  width:80%;
+  margin:0 auto;
  }
 }
